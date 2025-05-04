@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANEDEV | Software Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/NewProject copy/Frontend/src/styles.css">
+    <link rel="icon" href="/NewProject copy/Frontend/src/img/KANEDEV.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="justify-content-center jimu-primary-loading"></div>
+    </div>
+
+    <div id="content" style="display: none;">
+        <header>
+            <nav class="navbar">
+                <div class="animated-logo">
+                    <span class="logo-part">K</span>
+                    <span class="logo-part">A</span>
+                    <span class="logo-part">N</span>
+                    <span class="logo-part">E</span>
+                    <span class="logo-part">D</span>
+                    <span class="logo-part">E</span>
+                    <span class="logo-part">V</span>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="/NewProject copy/Frontend/Home.html" class="nav-link">Home</a></li>
+                        <li><a href="#About-Us" class="nav-link">About</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <!--<li><a href="/NewProject copy/Frontend/gamemode.html" class="nav-link">Game</a></li>-->
+                    </ul>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" class="input" id="darkModeToggle">
+                    <span class="slider"></span>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </nav>
+        </header>
+
+        <div class="home-page">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Welcome to KANEDEV</h1>
+                        <p class="hero-subtitle">Building innovative solutions for the future.</p>
+                        <a href="#projects" class="cta-button"><span>Explore Projects</span></a>
+                    </div>
+                    <div class="hero-image-container">
+                        <div class="gradient-overlay"></div>
+                        <img src="https://img.freepik.com/free-psd/gaming-template-design_23-2151706379.jpg" alt="KANEDEV Hero" class="hero-image">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="About-Us" class="about-me-section">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate Developer. Creative Technologist. Certified Prompt Engineer 🧠💬</p>
+            </div>
+            <div class="about-me-content">
+                <img src="/NewProject copy/Frontend/src/img/Sai Kyaw Gaung-1.JPG" alt="Kane Profile" class="about-me-photo">
+                <div class="about-me-text">
+                    <p>Hi, I'm Kane! I specialize in crafting innovative web solutions and turning ideas into reality. With a passion for technology and creativity, I aim to build experiences that inspire and empower.</p>
+                    <div class="skills-badge">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Prompt Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills-section">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Here’s what I bring to the table:</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">HTML / CSS / JS</div>
+                <div class="skill-card">Tailwind / TypeScript</div>
+                <div class="skill-card">Web Design & Branding</div>
+                <div class="skill-card">Prompt Engineering (Web AI, GPT-4, Midjourney)</div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h2 class="section-title">From Mind to Reality</h2>
+                <p class="section-subtitle">Innovative solutions that deliver real business value</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="https://images.pexels.com/photos/276267/pexels-photo-276267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 1" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Enterprise SaaS Platform</h3>
+                        <p class="project-description">Cloud-based solution for enterprise resource management.</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="cta-button">View Demo</a>
+                            <a href="#" class="cta-button secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="project2.jpg" alt="Project 2" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI-Powered Analytics</h3>
+                        <p class="project-description">Machine learning platform for business intelligence.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>D3.js</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="cta-button">View Demo</a>
+                            <a href="#" class="cta-button secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="project3.jpg" alt="Project 3" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mobile Banking App</h3>
+                        <p class="project-description">Secure financial application with biometric authentication.</p>
+                        <div class="tech-tags">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Blockchain</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="cta-button">View Demo</a>
+                            <a href="#" class="cta-button secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dev-confession">
+                <p>👨‍💻 Developer's Confession:</p>
+                <p>"Okay, full disclosure - these are sample projects for now! I'm just starting my coding journey and building my skills. But don't worry - real projects are coming soon! In the meantime, feel free to admire these beautiful placeholders and imagine all the amazing apps I'll build someday!"</p>
+                <p>Want to see my actual progress? <a href="https://github.com/yourusername" target="_blank">Follow my GitHub</a> where I'll be posting real projects as I build them!</p>
+            </div>
+            
+            <p class="projects-footer">More (actual) projects are coming soon... unless I get distracted by YouTube tutorials again. 🔥</p>
+
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you! Reach out to us for any inquiries or collaborations.</p>
+            </div>
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@kanedev.com">contact@kanedev.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Innovation City</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://github.com/Azyura203"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/saikyawgaung/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Popup -->
+        <div class="chatbot-popup" id="chatbotPopup">
+            <div class="chatbot-header">
+                <h3>KANEAI Chatbot</h3>
+                <button class="close-chatbot" id="closeChatbot">&times;</button>
+            </div>
+            <div class="chatbot-body" id="chatbotBody">
+                <div class="chatbot-message bot">
+                    <p>Hi, I am Kane. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." />
+                <button id="sendChatbotMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Chatbot Trigger Button -->
+        <a href="/NewProject copy/Frontend/KANEAI.html" class="chatbot-trigger" id="chatbotTrigger">
+            <i class="fas fa-comments"></i>
+        </a>
+
+        <!-- From Uiverse.io by vinodjangid07 -->
+        <button class="button" id="backToTop">
+          <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+              d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+            ></path>
+          </svg>
+        </button>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/NewProject/Frontend/src/img/KANEDEV.png" alt="KANEDEV Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KANEDEV. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/NewProject copy/Frontend/src/script.js"></script>
+</body>
+</html>

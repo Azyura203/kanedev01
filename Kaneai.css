@@ -1,0 +1,340 @@
+/* Global Styles */
+body {
+    background: linear-gradient(120deg, #050505, #0a0a0a);
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+body.light-mode {
+    background: linear-gradient(120deg, #f0f0f0, #ffffff);
+    color: #050505;
+}
+
+/* KANEAI Specific Styles */
+.kaneai-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.kaneai-wrapper {
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto; /* CENTER the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.kaneai-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px; /* more side padding */
+    box-shadow: 0px 0px 30px rgba(0, 230, 230, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+}
+
+@media (min-width: 1800px) {
+    .kaneai-wrapper {
+      max-width: 1800px;
+    }
+  }
+  
+
+/* Header Styles */
+.kaneai-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.back-to-home {
+    display: inline-block;
+    color: #00e6e6;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+    color: #ff00ff;
+}
+
+.kaneai-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    background: #00e6e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #050505;
+    box-shadow: 0px 0px 15px rgba(0, 230, 230, 0.7);
+}
+
+.kaneai-title {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(90deg, #00e6e6, #ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.kaneai-title span {
+    font-weight: bold;
+}
+
+.kaneai-tagline {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Chat Interface */
+.kaneai-chat-interface {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat Body */
+#chatBody {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(15, 15, 15, 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Chat Messages */
+.chat-message {
+    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 18px;
+    line-height: 1.5;
+    position: relative;
+    word-wrap: break-word;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.chat-message.bot {
+    align-self: flex-start;
+    background: rgba(0, 230, 230, 0.15);
+    border: 1px solid rgba(0, 230, 230, 0.3);
+    color: #e0f7fa;
+    border-top-left-radius: 5px;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    background: rgba(255, 0, 255, 0.15);
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    color: #f3e5f5;
+    border-top-right-radius: 5px;
+}
+
+.chat-message p {
+    margin: 0;
+}
+
+/* Input Area */
+.chat-input-area {
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.chat-option {
+    background: rgba(0, 230, 230, 0.1);
+    border: 1px solid #00e6e6;
+    color: #00e6e6;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.chat-option:hover {
+    background: rgba(0, 230, 230, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 230, 230, 0.3);
+}
+
+.chat-option:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+#customMessage {
+    flex-grow: 1;
+    padding: 12px 18px;
+    border-radius: 50px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    resize: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    max-height: 150px;
+}
+
+#customMessage:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 230, 230, 0.3);
+}
+
+.send-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #00e6e6;
+    color: #050505;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-button:hover {
+    background: #ff00ff;
+    color: white;
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.5);
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: inline-flex;
+    padding: 10px 15px;
+    background: rgba(0, 230, 230, 0.2);
+    border: 1px solid rgba(0, 230, 230, 0.4);
+    color: #00e6e6;
+    border-radius: 18px;
+    align-self: flex-start;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #00e6e6;
+    border-radius: 50%;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+
+/* Scrollbar */
+#chatBody::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chatBody::-webkit-scrollbar-thumb {
+    background: rgba(0, 230, 230, 0.5);
+    border-radius: 4px;
+}
+
+#chatBody::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kaneai-container {
+        padding: 20px;
+    }
+    
+    .kaneai-chat-interface {
+        height: 500px;
+    }
+    
+    .chat-options {
+        justify-content: center;
+    }
+    
+    .chat-message {
+        max-width: 90%;
+    }
+    
+    .kaneai-title {
+        font-size: 2rem;
+    }
+    
+    .avatar-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}

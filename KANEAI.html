@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANEDEV | KANEAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/NewProject copy/Frontend/src/Kaneai.css">
+</head>
+<body class="kaneai-page">
+    <div class="kaneai-wrapper">
+        <div class="kaneai-container">
+            <!-- Header -->
+            <div class="kaneai-header">
+                <a href="/NewProject copy/Frontend/Home.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Back to KANEDEV
+                </a>
+                <div class="kaneai-brand">
+                    <div class="kaneai-avatar">
+                        <div class="avatar-circle">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <h2 class="kaneai-title">KANE<span>AI</span></h2>
+                </div>
+                <p class="kaneai-tagline">Your Personal Dev Companion</p>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="kaneai-chat-interface">
+                <div class="chat-body" id="chatBody">
+                    <div class="chat-message bot">
+                        <p>Hello! I'm KaneAI, your development assistant. How can I help you today?</p>
+                    </div>
+                </div>
+                
+                <!-- Input Area -->
+                <div class="chat-input-area">
+                    <div class="chat-options">
+                        <button class="chat-option" data-query="about">About KANEDEV</button>
+                        <button class="chat-option" data-query="projects">Latest Projects</button>
+                        <button class="chat-option" data-query="funfact">Fun Fact</button>
+                    </div>
+                    <div class="chat-input-container">
+                        <textarea id="customMessage" placeholder="Message KANEAI..." rows="1"></textarea>
+                        <button id="sendCustomMessage" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/NewProject copy/Frontend/src/kaneai.js"></script>
+</body>
+</html>
